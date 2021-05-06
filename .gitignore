@@ -50,3 +50,4 @@ docroot/sites/simpletest
 /.env
 /.editorconfig
 /.gitattributes
+composer.lock
