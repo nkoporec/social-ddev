@@ -1,0 +1,12 @@
+#!/bin/bash
+
+## Description: Run php code sniffer.
+## Usage: phpcs path_to_file
+## Example: "ddev phpcs", "ddev phpcs path_to_file_or_folder"
+
+if [ $# -eq 0 ] ; then
+  ./vendor/bin/phpcs --standard=Drupal,DrupalPractice --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md,yml --ignore=node_modules,bower_components,vendor ./docroot/profiles/contrib/social
+  exit
+else
+  ./vendor/bin/phpcs --standard=Drupal,DrupalPractice --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md,yml --ignore=node_modules,bower_components,vendor $@
+fi

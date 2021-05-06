@@ -4,6 +4,11 @@
 ## Usage: init
 ## Example: "ddev init"
 
+# Remove any old stuff.
+rm -R ./vendor
+rm -R ./docroot
+rm ./composer.lock
+
 # Install dependencies.
 ddev init-site
 

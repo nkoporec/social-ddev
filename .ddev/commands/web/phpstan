@@ -1,0 +1,12 @@
+#!/bin/bash
+
+## Description: Run phpstan.
+## Usage: phpstan path_to_file
+## Example: "ddev phpstan", "ddev phpstan path_to_file_or_folder"
+
+if [ $# -eq 0 ] ; then
+  ./vendor/bin/phpstan analyze ./docroot/profiles/contrib/social/
+  exit
+else
+  ./vendor/bin/phpstan analyze $@
+fi
