@@ -1,6 +1,6 @@
 # DDEV powered Open Social Installation
 
-This is a Open Social installation pre-configured for use with [DDEV](https://github.com/drud/ddev).
+This is an [Open Social](https://github.com/goalgorilla/open_social) installation pre-configured for use with [DDEV](https://github.com/drud/ddev).
 
 ## Setup instructions
 
