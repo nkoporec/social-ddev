@@ -1,0 +1,19 @@
+#!/bin/bash
+
+## Description: Install Open Social dependencies
+## Usage: init-site
+## Example: "ddev init-site"
+
+# Install composer dependencies
+composer install
+
+# Create private files directory.
+rm -rf /var/www/html/files_private/*
+mkdir /var/www/html/files_private
+
+# Copy default.settings.php and default.settings.local.php
+cp /var/www/html/.ddev/files/default.settings.php /var/www/html/docroot/sites/default/settings.php
+cp /var/www/html/.ddev/files/default.settings.local.php /var/www/html/docroot/sites/default/settings.local.php
+
+# Copy services.yml
+cp /var/www/html/.ddev/files/default.services.yml /var/www/html/docroot/sites/default/development.services.yml

@@ -1,0 +1,41 @@
+#!/bin/bash
+
+## Description: Install Open Social profile
+## Usage: install
+## Example: "ddev install"
+
+# Use the normal installer without optional modules
+drush -y site-install social --account-pass=admin install_configure_form.update_status_module='array(FALSE,FALSE)' --site-name='Open Social';
+
+# Make sure we add swiftmailer default settings if the environment is development
+drush cset swiftmailer.transport transport 'smtp' -y
+drush cset swiftmailer.transport smtp_host 'mailcatcher' -y
+drush cset swiftmailer.transport smtp_port 1025 -y
+echo "updated swiftmailer settings"
+
+# Demo content
+if [ "$1" == "demo" ]; then
+  drush pm-enable social_demo -y
+  drush cc drush
+  echo "creating demo content"
+  drush sda file user group topic event eventenrollment post comment like # Add the demo content
+  drush pm-uninstall social_demo -y
+fi
+
+echo "flush image caches"
+drush cc drush
+drush image-flush --all
+echo "run activity queues"
+drush queue-run activity_logger_message
+drush queue-run activity_creator_logger
+drush queue-run activity_creator_activities
+drush queue-run activity_send_email_worker
+echo "trigger a search api re-index"
+drush php-eval 'drush_search_api_reset_tracker();';
+
+echo "rebuild node access"
+drush php-eval 'node_access_rebuild()';
+
+# development modules.
+echo "enabling devel modules"
+drush en social_devel -y

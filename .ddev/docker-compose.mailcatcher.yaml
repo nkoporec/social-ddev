@@ -1,0 +1,12 @@
+version: "3.6"
+services:
+  mailcatcher:
+    image: schickling/mailcatcher
+    ports:
+      - "1080"
+    labels:
+      com.ddev.site-name: ${DDEV_SITENAME}
+      com.ddev.approot: $DDEV_APPROOT
+    container_name: ddev-${DDEV_SITENAME}-mailcatcher
+    links:
+      - web:${DDEV_HOSTNAME}

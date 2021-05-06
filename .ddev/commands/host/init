@@ -1,0 +1,17 @@
+#!/bin/bash
+
+## Description: Init Open Social repository
+## Usage: init
+## Example: "ddev init"
+
+# Install dependencies.
+ddev init-site
+
+# Install the profile
+if [ "$1" == "demo" ]; then
+  echo "Installing Open Social with demo content"
+  ddev install demo
+else
+  echo "Installing Open Social"
+  ddev install
+fi
