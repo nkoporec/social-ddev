@@ -1,0 +1,21 @@
+version: '3.6'
+services:
+  selenium:
+    image: selenium/standalone-chrome:latest
+    restart: unless-stopped
+    container_name: ddev-${DDEV_SITENAME}-chrome
+    labels:
+      com.ddev.site-name: ${DDEV_SITENAME}
+      com.ddev.approot: ${DDEV_APPROOT}
+    volumes:
+      - ddev-global-cache:/mnt/ddev-global-cache
+      - ".:/mnt/ddev_config"
+    external_links:
+      - "ddev-router:${DDEV_HOSTNAME}"
+    cap_add:
+      - SYS_ADMIN
+    shm_size: 256M
+
+  web:
+    links:
+      - selenium:${DDEV_HOSTNAME}

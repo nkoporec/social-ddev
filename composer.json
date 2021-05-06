@@ -13,7 +13,18 @@
         "mglaman/phpstan-drupal": "0.12",
         "mglaman/drupal-check": "^1.0",
         "phpunit/phpunit": "^7.5",
-        "symfony/phpunit-bridge": "^3.4.3"
+        "symfony/phpunit-bridge": "^3.4.3",
+        "jcalderonzumba/gastonjs": "~1.0.2",
+        "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
+        "mikey179/vfsstream": "~1.2",
+        "symfony/css-selector": "~2.8",
+        "behat/behat": "3.*@stable",
+        "behat/mink": "1.*@stable",
+        "behat/mink-extension": "*",
+        "behat/mink-goutte-driver": "*",
+        "behat/mink-selenium2-driver": "*",
+        "drupal/coder": "8.3.11",
+        "dealerdirect/phpcodesniffer-composer-installer": "~0.6 || ~0.7"
     },
     "require-dev": {
         "drupal/drupal-extension": "^3.4",
