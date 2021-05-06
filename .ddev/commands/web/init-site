@@ -20,3 +20,6 @@ cp /var/www/html/.ddev/files/default.settings.local.php /var/www/html/docroot/si
 
 # Copy services.yml
 cp /var/www/html/.ddev/files/default.services.yml /var/www/html/docroot/sites/default/development.services.yml
+
+# Set up phpunit.
+cp /var/www/html/.ddev/files/phpunit.xml.dist /var/www/html/docroot/core/phpunit.xml

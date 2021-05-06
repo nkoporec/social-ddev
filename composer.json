@@ -11,7 +11,9 @@
         "dealerdirect/phpcodesniffer-composer-installer": "~0.6 || ~0.7",
         "drupal/coder": "8.3.11",
         "mglaman/phpstan-drupal": "0.12",
-        "mglaman/drupal-check": "^1.0"
+        "mglaman/drupal-check": "^1.0",
+        "phpunit/phpunit": "^7.5",
+        "symfony/phpunit-bridge": "^3.4.3"
     },
     "require-dev": {
         "drupal/drupal-extension": "^3.4",

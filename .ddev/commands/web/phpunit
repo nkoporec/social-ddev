@@ -1,0 +1,12 @@
+#!/bin/bash
+
+## Description: Run phpunit.
+## Usage: phpunit path_to_file
+## Example: "ddev phpunit", "ddev phpunit path_to_file_or_folder"
+
+if [ $# -eq 0 ] ; then
+  cd docroot && ../vendor/bin/phpunit -c core profiles/contrib/social
+  exit
+else
+  cd docroot && ../vendor/bin/phpunit -c core $@
+fi
