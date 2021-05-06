@@ -17,6 +17,7 @@ mkdir /var/www/html/docroot/modules/custom
 # Copy default.settings.php and default.settings.local.php
 cp /var/www/html/.ddev/files/default.settings.php /var/www/html/docroot/sites/default/settings.php
 cp /var/www/html/.ddev/files/default.settings.local.php /var/www/html/docroot/sites/default/settings.local.php
+cp /var/www/html/.ddev/files/settings.ddev.php /var/www/html/docroot/sites/default/settings.ddev.php
 
 # Copy services.yml
 cp /var/www/html/.ddev/files/default.services.yml /var/www/html/docroot/sites/default/development.services.yml

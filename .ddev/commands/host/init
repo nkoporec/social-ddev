@@ -4,9 +4,6 @@
 ## Usage: init
 ## Example: "ddev init"
 
-# Stop any running containers.
-ddev stop
-
 # Remove any old stuff.
 rm -R -f ./vendor
 rm -R -f ./docroot
