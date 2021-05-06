@@ -15,8 +15,8 @@ Follow [DDEV instructions](https://ddev.readthedocs.io/en/stable/)
 1. Clone this repo into your Projects directory
 
     ```
-    git clone https://github.com/nkoporec/social-ddev social-ddev
-    cd social-ddev
+    git clone https://github.com/nkoporec/social-ddev open-social
+    cd open-social
     ```
 
 
