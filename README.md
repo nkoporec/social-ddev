@@ -18,13 +18,8 @@ Follow [DDEV instructions](https://ddev.readthedocs.io/en/stable/)
     git clone https://github.com/nkoporec/social-ddev open-social
     cd open-social
     ```
-2. Start containers
 
-    ```
-    ddev start
-    ```
-
-3. Initialize the site
+2. Initialize the site
     1. Initialize the site without demo content
     
         ```
