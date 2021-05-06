@@ -53,25 +53,25 @@ The default login is admin/admin
 
  This repository includes [PHP CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) and [Phpstan](https://github.com/phpstan/phpstan).
  
- ##### Run phpcs for the entire Open Social profile
+ ##### Run PHP CodeSniffer for the entire Open Social distribution
     
     ddev phpcs
    
    
 
- ##### Run phpcs for a specific file/folder
+ ##### Run PHP CodeSniffer for a specific file/folder
 
     
     ddev phpcs ./path_to_file_or_folder
   
 
- ##### Run phpstan for the entire Open Social profile
+ ##### Run Phpstan for the entire Open Social distribution
 
 
     ddev phpstan
 
 
- ##### Run phpstan for a specific file/folder
+ ##### Run Phpstan for a specific file/folder
 
 
     ddev phpstan ./path_to_file_or_folder
