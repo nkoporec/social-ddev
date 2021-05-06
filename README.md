@@ -104,3 +104,11 @@ See more at [PHP Step Debugging with DDEV](https://ddev.readthedocs.io/en/stable
     ```
     ddev phpunit path_to_file
     ```
+    
+ 3. Run behat tests
+
+    ```
+    ddev behat
+    ```
+    See more at [command line tool - behat](https://docs.behat.org/en/v2.5/guides/6.cli.html#command-line-tool-behat)
+ 
