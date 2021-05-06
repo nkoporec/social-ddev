@@ -19,23 +19,23 @@ Follow [DDEV instructions](https://ddev.readthedocs.io/en/stable/)
     cd social-ddev
     ```
 
+
 2. Initialize the site
+    1. Initialize the site without demo content
+    
+        ```
+        ddev init
+        ```
+    
+    2. Initialize the site with demo content
+    
+        ```
+        ddev init demo
+        ```
+    
+    
+   _This will install composer dependencies and install the site via drush._
 
- 2.1. Initialize the site without demo content
-
-    This will initialize local settings and install the site via drush
-
-    ```
-    ddev init
-    ```
-
- 2.1. Initialize the site with demo content
-
-    This will initialize local settings and install the site via drush with demo content
-
-    ```
-    ddev init demo
-    ```
 
 3. Point your browser to
 
@@ -54,6 +54,7 @@ The default login is admin/admin
     ```
     ddev phpcs
     ```
+   
 
  2. Running phpcs for a specific file/folder
 
