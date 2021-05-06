@@ -45,7 +45,9 @@ Follow [DDEV instructions](https://ddev.readthedocs.io/en/stable/)
 
 The default login is admin/admin
 
-## Running code checks
+## Tools
+
+#### Running code checks
 
  This repository includes `phpcs` and `phpstan` preconfigured.
 
@@ -74,7 +76,7 @@ The default login is admin/admin
     ddev phpstan path_to_file_or_folder
     ```
 
-## Xdebug
+#### Xdebug
 
 For performance reasons Xdebug is disabled at start up, when you need to use it, simply run:
 
@@ -90,4 +92,16 @@ ddev xdebug off
 
 See more at [PHP Step Debugging with DDEV](https://ddev.readthedocs.io/en/stable/users/step-debugging/)
 
-## Tests
+#### Tests
+
+ 1. Run phpunit tests for entire Open Social distribution
+
+    ```
+    ddev phpunit
+    ```
+    
+ 2. Run a specific phpunit test
+
+    ```
+    ddev phpunit path_to_file
+    ```
