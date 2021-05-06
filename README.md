@@ -73,3 +73,21 @@ The default login is admin/admin
     ```
     ddev phpstan path_to_file_or_folder
     ```
+
+## Xdebug
+
+For performance reasons Xdebug is disabled at start up, when you need to use it, simply run:
+
+```
+ddev xdebug on
+```
+
+When you don't need it anymore, it's recommended to turn it off by running:
+
+```
+ddev xdebug off
+```
+
+See more at [PHP Step Debugging with DDEV](https://ddev.readthedocs.io/en/stable/users/step-debugging/)
+
+## Tests
