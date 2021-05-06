@@ -1,6 +1,6 @@
 # DDEV powered Open Social Installation
 
-This is a Open Social installation pre-configured for use with DDEV.
+This is a Open Social installation pre-configured for use with [DDEV](https://github.com/drud/ddev).
 
 ## Setup instructions
 
@@ -9,6 +9,7 @@ This is a Open Social installation pre-configured for use with DDEV.
 **This is a one time setup - skip this if you already have a working DDEV environment.**
 
 Follow [DDEV instructions](https://ddev.readthedocs.io/en/stable/)
+
 
 ### Step #2: Project setup
 
@@ -44,38 +45,41 @@ Follow [DDEV instructions](https://ddev.readthedocs.io/en/stable/)
 
 The default login is admin/admin
 
+<br>
+
 ## Tools
 
-#### Running code checks
+### Running code checks
 
- This repository includes `phpcs` and `phpstan` preconfigured.
-
- 1. Running phpcs for the entire open-social profile
-
-    ```
+ This repository includes [PHP CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) and [Phpstan](https://github.com/phpstan/phpstan).
+ 
+ ##### Run phpcs for the entire Open Social profile
+    
     ddev phpcs
-    ```
+   
    
 
- 2. Running phpcs for a specific file/folder
+ ##### Run phpcs for a specific file/folder
 
-    ```
-    ddev phpcs path_to_file_or_folder
-    ```
+    
+    ddev phpcs ./path_to_file_or_folder
+  
 
- 3. Running phpstan for the entire open-social profile
+ ##### Run phpstan for the entire Open Social profile
 
-    ```
+
     ddev phpstan
-    ```
 
- 4. Running phpstan for a specific file/folder
 
-    ```
-    ddev phpstan path_to_file_or_folder
-    ```
+ ##### Run phpstan for a specific file/folder
 
-#### Xdebug
+
+    ddev phpstan ./path_to_file_or_folder
+    
+
+<br>
+
+### Xdebug
 
 For performance reasons Xdebug is disabled at start up, when you need to use it, simply run:
 
@@ -91,24 +95,31 @@ ddev xdebug off
 
 See more at [PHP Step Debugging with DDEV](https://ddev.readthedocs.io/en/stable/users/step-debugging/)
 
-#### Tests
 
- 1. Run phpunit tests for entire Open Social distribution
+<br>
 
-    ```
+### Tests
+
+   ##### Run PhpUnit tests for entire Open Social distribution
+
+    
     ddev phpunit
-    ```
     
- 2. Run a specific phpunit test
-
-    ```
-    ddev phpunit path_to_file
-    ```
     
- 3. Run behat tests
+   ##### Run a specific PhpUnit test
 
-    ```
+
+    ddev phpunit ./path_to_file
+   
+    
+   ##### Run Behat tests
+
+  
     ddev behat
-    ```
-    See more at [command line tool - behat](https://docs.behat.org/en/v2.5/guides/6.cli.html#command-line-tool-behat)
- 
+   
+    
+See more at [PhpUnit](https://phpunit.de/) and [Behat](https://docs.behat.org/en/latest/).
+
+<br>
+
+For more info about other tools such as drush and how to use DDEV, see [DDEV-Local Documentation](https://ddev.readthedocs.io/en/stable/).
