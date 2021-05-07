@@ -1,0 +1,23 @@
+version: "3.6"
+services:
+  solr:
+    image: solr:6.6
+    ports:
+      - "8983"
+    labels:
+      com.ddev.site-name: ${DDEV_SITENAME}
+      com.ddev.approot: $DDEV_APPROOT
+    container_name: ddev-${DDEV_SITENAME}-solr
+    environment:
+        - VIRTUAL_HOST=$DDEV_HOSTNAME
+        - HTTP_EXPOSE=8983
+        - SOLR_SOLR_MEM_SIZE=512m
+        - PARTIAL_SEARCH_ENABLED=false
+    volumes:
+        - ./solr/conf:/solr-conf/conf:cached
+    entrypoint:
+        - solr-precreate
+        - drupal
+        - /solr-conf
+    links:
+      - web:${DDEV_HOSTNAME}
