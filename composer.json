@@ -14,7 +14,7 @@
         "dealerdirect/phpcodesniffer-composer-installer": "~0.6 || ~0.7",
         "drupal/coder": "8.3.11",
         "drush/drush": "8.*@stable",
-        "goalgorilla/open_social": "^10.2.x-dev",
+        "goalgorilla/open_social": "^10.3.x-dev",
         "jcalderonzumba/gastonjs": "~1.0.2",
         "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
         "mglaman/drupal-check": "^1.0",
