@@ -43,11 +43,6 @@
             "type": "composer",
             "url": "https://asset-packagist.org"
         },
-        "2": {
-            "type": "composer",
-            "url": "https://repo.packagist.com/opensocial/",
-            "except":  ["drupal/social"]
-        },
         "social": {
             "type": "git",
             "url": "https://github.com/goalgorilla/open_social.git",
