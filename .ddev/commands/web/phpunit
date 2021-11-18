@@ -8,5 +8,11 @@ if [ $# -eq 0 ] ; then
   cd docroot && ../vendor/bin/phpunit -c core profiles/contrib/social
   exit
 else
-  cd docroot && ../vendor/bin/phpunit -c core $@
+  path=$@
+  prefix1='./'
+  prefix2='docroot/'
+  relative=${path//$prefix1/}
+  relative=${path//$prefix2/}
+
+  cd docroot && ../vendor/bin/phpunit -c core ${relative}
 fi

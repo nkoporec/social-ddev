@@ -18,7 +18,7 @@ if [ "$1" == "demo" ]; then
   drush pm-enable social_demo -y
   drush cc drush
   echo "creating demo content"
-  drush sda file user group topic event eventenrollment post comment like # Add the demo content
+  drush sda file user group topic event event_enrollment post comment like # Add the demo content
   drush pm-uninstall social_demo -y
 fi
 
@@ -30,12 +30,6 @@ drush queue-run activity_logger_message
 drush queue-run activity_creator_logger
 drush queue-run activity_creator_activities
 drush queue-run activity_send_email_worker
-echo "trigger a search api re-index"
-drush php-eval 'drush_search_api_reset_tracker();';
 
 echo "rebuild node access"
 drush php-eval 'node_access_rebuild()';
-
-# development modules.
-echo "enabling devel modules"
-drush en social_devel -y

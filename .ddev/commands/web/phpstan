@@ -5,8 +5,14 @@
 ## Example: "ddev phpstan", "ddev phpstan path_to_file_or_folder"
 
 if [ $# -eq 0 ] ; then
-  ./vendor/bin/phpstan analyze ./docroot/profiles/contrib/social/
+  cd docroot && ../vendor/bin/phpstan analyze -c ./profiles/contrib/social/phpstan.neon ./profiles/contrib/social
   exit
 else
-  ./vendor/bin/phpstan analyze $@
+  path=$@
+  prefix1='./'
+  prefix2='docroot/'
+  relative=${path//$prefix1/}
+  relative=${path//$prefix2/}
+
+  cd docroot && ../vendor/bin/phpstan analyze -c ./profiles/contrib/social/phpstan.neon ./${relative}
 fi
