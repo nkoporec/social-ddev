@@ -22,18 +22,18 @@ Follow [DDEV instructions](https://ddev.readthedocs.io/en/stable/)
 
 2. Initialize the site
     1. Initialize the site without demo content
-    
+
         ```
         ddev init
         ```
-    
+
     2. Initialize the site with demo content
-    
+
         ```
         ddev init demo
         ```
-    
-    
+
+
    _This will install composer dependencies and install the site via drush._
 
 
@@ -52,18 +52,18 @@ The default login is admin/admin
 ### Running code checks
 
  This repository includes [PHP CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) and [Phpstan](https://github.com/phpstan/phpstan).
- 
+
  ##### Run PHP CodeSniffer for the entire Open Social distribution
-    
+
     ddev phpcs
-   
-   
+
+
 
  ##### Run PHP CodeSniffer for a specific file/folder
 
-    
+
     ddev phpcs ./path_to_file_or_folder
-  
+
 
  ##### Run Phpstan for the entire Open Social distribution
 
@@ -75,7 +75,19 @@ The default login is admin/admin
 
 
     ddev phpstan ./path_to_file_or_folder
-    
+
+
+ ##### Run Rector for the entire Open Social distribution
+
+
+    ddev rector
+
+
+ ##### Run Rector for a specific file/folder
+
+
+    ddev rector ./path_to_file_or_folder
+
 
 <br>
 
@@ -102,22 +114,22 @@ See more at [PHP Step Debugging with DDEV](https://ddev.readthedocs.io/en/stable
 
    ##### Run PhpUnit tests for entire Open Social distribution
 
-    
+
     ddev phpunit
-    
-    
+
+
    ##### Run a specific PhpUnit test
 
 
     ddev phpunit ./path_to_file
-   
-    
+
+
    ##### Run Behat tests
 
-  
+
     ddev behat
-   
-    
+
+
 See more at [PhpUnit](https://phpunit.de/) and [Behat](https://docs.behat.org/en/latest/).
 
 <br>
