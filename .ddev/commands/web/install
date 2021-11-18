@@ -25,6 +25,7 @@ fi
 echo "flush image caches"
 drush cc drush
 drush image-flush --all
+
 echo "run activity queues"
 drush queue-run activity_logger_message
 drush queue-run activity_creator_logger
@@ -33,3 +34,6 @@ drush queue-run activity_send_email_worker
 
 echo "rebuild node access"
 drush php-eval 'node_access_rebuild()';
+
+echo "enabling devel modules"
+drush en -y config_update config_update_ui devel devel_generate dblog views_ui field_ui contextual
