@@ -52,18 +52,6 @@
             "type": "git",
             "url": "https://github.com/goalgorilla/open_social.git",
             "only": ["goalgorilla/open_social", "drupal/social"]
-        },
-        "social_challenge": {
-            "type": "path",
-            "url": "./docroot/modules/custom/social_challenge"
-        },
-        "social_role_visibility": {
-            "type": "path",
-            "url": "./docroot/modules/custom/social_role_visibility"
-        },
-        "social_monetization": {
-            "type": "path",
-            "url": "./docroot/modules/custom/social_monetization"
         }
     },
     "extra": {
