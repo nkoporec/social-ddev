@@ -10,6 +10,7 @@
     },
     "require-dev": {
         "drush/drush": "10.*@stable",
+        "palantirnet/drupal-rector" : "3248684.x-dev",
         "drupal/coder": "^8.3",
         "drupal/core-dev": "~9.1.0",
         "drupal/devel": "^4.1",
@@ -34,6 +35,10 @@
         }
     },
     "repositories": {
+        "rector-php": {
+            "type": "vcs",
+            "url": "https://github.com/bluehorndigital/drupal-rector.git"
+        },
         "0": {
             "type": "composer",
             "url": "https://packages.drupal.org/8",
