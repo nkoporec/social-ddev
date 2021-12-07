@@ -6,11 +6,11 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "goalgorilla/open_social": "dev-feature/3162491-group-update-d9"
+        "goalgorilla/open_social": "dev-feature/3162491-group-update-d9",
+        "palantirnet/drupal-rector": "^0.12.0"
     },
     "require-dev": {
         "drush/drush": "10.*@stable",
-        "palantirnet/drupal-rector" : "3248684.x-dev",
         "drupal/coder": "^8.3",
         "drupal/core-dev": "~9.1.0",
         "drupal/devel": "^4.1",
@@ -35,10 +35,6 @@
         }
     },
     "repositories": {
-        "rector-php": {
-            "type": "vcs",
-            "url": "https://github.com/bluehorndigital/drupal-rector.git"
-        },
         "0": {
             "type": "composer",
             "url": "https://packages.drupal.org/8",
