@@ -6,7 +6,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "goalgorilla/open_social": "dev-feature/3162491-group-update-d9",
+        "goalgorilla/open_social": "dev-main",
         "palantirnet/drupal-rector": "^0.12.0"
     },
     "require-dev": {
@@ -79,6 +79,8 @@
             "drush/contrib/{$name}": [
                 "type:drupal-drush"
             ]
+        },
+        "patches": {
         },
         "enable-patching": true,
         "patchLevel": {
