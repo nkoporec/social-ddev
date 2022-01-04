@@ -1,5 +1,5 @@
 name: open-social
-type: drupal8
+type: drupal9
 docroot: docroot
 php_version: "7.4"
 webserver_type: nginx-fpm
