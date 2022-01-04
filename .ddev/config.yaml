@@ -1,4 +1,4 @@
-name: open-social-d9
+name: open-social
 type: drupal9
 docroot: docroot
 php_version: "7.4"
