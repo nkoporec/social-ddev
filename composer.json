@@ -10,7 +10,7 @@
         "palantirnet/drupal-rector": "^0.12.0"
     },
     "require-dev": {
-        "drush/drush": "10.*@stable",
+        "drush/drush": "11.*@stable",
         "drupal/coder": "^8.3",
         "drupal/core-dev": "~9.1.0",
         "drupal/devel": "^4.1",
