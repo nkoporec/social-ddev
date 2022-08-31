@@ -4,6 +4,9 @@
 ## Usage: install
 ## Example: "ddev install"
 
+# Make sure the files folder exists.
+cd /var/www/html/docroot/sites/default && mkdir files
+
 # Use the normal installer without optional modules
 drush -y site-install social --account-pass=admin install_configure_form.update_status_module='array(FALSE,FALSE)' --site-name='Open Social';
 

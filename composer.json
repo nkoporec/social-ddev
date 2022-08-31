@@ -91,5 +91,15 @@
                 "web-root": "docroot/"
             }
         }
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "drupal/core-composer-scaffold": true,
+            "cweagans/composer-patches": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "oomphinc/composer-installers-extender": true,
+            "phpstan/extension-installer": true
+        }
     }
 }
